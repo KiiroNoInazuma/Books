@@ -1,7 +1,7 @@
 public class Library {
     private Book[] books;
 
-    Library(int arrLength) {
+    public Library(int arrLength) {
         books = new Book[arrLength];
     }
 
