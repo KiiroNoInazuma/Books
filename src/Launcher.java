@@ -38,8 +38,9 @@ public class Launcher {
         potter.setPublicYear(2007);
 
         Book[] books = new Book[5];
-        books[1] = origin;
+        books[2] = origin;
         books[4] = potter;
+
         addBooks(books, vampire);
         printBooks(books);
 
