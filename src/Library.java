@@ -20,12 +20,12 @@ public class Library {
         }
     }
 
-    void printAllBooks(Book[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == null) continue;
-            System.out.print("\"" + array[i].getAuthor().getName() + " " + array[i].getAuthor().getSurname() + ": ");
-            System.out.print(array[i].getTitleBook() + ": ");
-            System.out.println(array[i].getPublicYear() + "\"");
+    void printTitleBook() {
+        for (int i = 0; i < books.length; i++) {
+            if (books[i] == null) continue;
+            System.out.print("\"" + books[i].getAuthor().getName() + " " + books[i].getAuthor().getSurname() + ": ");
+            System.out.print(books[i].getTitleBook() + ": ");
+            System.out.println(books[i].getPublicYear() + "\"");
 
 
         }
@@ -69,9 +69,8 @@ public class Library {
         Book vampire = new Book("Vampire", new Author("Ann", "Rice"), 2003);
         Library lb = new Library(5);
         lb.addBooks(vampire);
-        lb.printTitleBook("Vampire");
         lb.setYear("Vampire", 2004);
-        lb.printTitleBook("Vampire");
+        lb.printTitleBook();
 
     }
 }
