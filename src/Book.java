@@ -24,5 +24,4 @@ public class Book {
     void setPublicYear(int year) {
         publicYear = year;
     }
-
 }
