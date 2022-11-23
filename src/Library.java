@@ -38,7 +38,7 @@ public class Library {
         for (int i = 0; i < books.length; i++) {
             if (books[i] != null) {
                 nameBook = books[i].getTitleBook();
-                nameAuthor = books[i].getAuthor().getName() + "" + books[i].getAuthor().getSurname();
+                nameAuthor = books[i].getAuthor().getName() + " " + books[i].getAuthor().getSurname();
                 date = books[i].getPublicYear();
                 if (nameBook.equals(title)) {
                     System.out.println("The " + nameBook + " by " + nameAuthor + " was published in " + date + ".");
