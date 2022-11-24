@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Library {
     private Book[] books;
 
@@ -5,7 +7,8 @@ public class Library {
         books = new Book[arrLength];
     }
 
-    void addBooks(Book add) {
+    void addBooks(String titleBook, String nameAuthor, String surname, int publicYear) {
+        Book add = new Book(titleBook, new Author(nameAuthor, surname), publicYear);
         boolean check = false;
         for (int x = 0; x < books.length; x++) {
             if (books[x] == null) {
@@ -20,7 +23,7 @@ public class Library {
         }
     }
 
-    void printTitleBook() {
+    void printInfoBook() {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) continue;
             System.out.print("\"" + books[i].getAuthor().getName() + " " + books[i].getAuthor().getSurname() + ": ");
@@ -31,7 +34,7 @@ public class Library {
         }
     }
 
-    void printTitleBook(String title) {
+    void printInfoBook(String title) {
         String nameBook;
         String nameAuthor;
         int date;
@@ -63,14 +66,11 @@ public class Library {
     }
 
     public static void main(String[] args) {
-
-        Book origin = new Book("Origin", new Author("Dan", "Brown"), 2017);
-        Book potter = new Book("Harry Potter", new Author("Joanne", "Rowling"), 2005);
-        Book vampire = new Book("Vampire", new Author("Ann", "Rice"), 2003);
         Library lb = new Library(5);
-        lb.addBooks(vampire);
-        lb.setYear("Vampire", 2004);
-        lb.printTitleBook();
+        lb.addBooks("Origin", "Dan", "Brown", 2017);
+        lb.addBooks("Harry Potter", "Joanne", "Rowling", 2005);
+        lb.addBooks("Vampire", "Ann", "Rice", 2003);
+        lb.printInfoBook();
 
     }
 }
