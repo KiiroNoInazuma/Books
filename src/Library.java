@@ -62,7 +62,6 @@ public class Library {
             }
         }
         System.out.println("Ошибка изменения даты: книга не найдена.");
-
     }
 
     public static void main(String[] args) {
@@ -71,6 +70,5 @@ public class Library {
         lb.addBooks("Harry Potter", "Joanne", "Rowling", 2005);
         lb.addBooks("Vampire", "Ann", "Rice", 2003);
         lb.printInfoBook();
-
     }
 }
